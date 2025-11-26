@@ -1,11 +1,8 @@
 import { createContext, useContext, useReducer } from "react";
+import { cartReducer, initialState } from "../reducers/cartReducer";
+
 
 const CartContext = createContext();
-
-const initialState = {};
-function cartReducer(state, action) {
-  return state;
-}
 
 export function CartProvider({ children }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
